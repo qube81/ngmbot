@@ -15,7 +15,7 @@ module.exports = (robot) ->
     
     dayMs     = 24*60*60*1000
     hourMs    = 60*60*1000
-    MinuteMs  = 60*1000
+    minuteMs  = 60*1000
     secondsMs = 1000
     
     days = parseInt(diffMs/dayMs, 10)
@@ -24,8 +24,8 @@ module.exports = (robot) ->
     hours = parseInt(diffMs/hourMs, 10)
     diffMs -= hours * hourMs
     
-    minutes = parseInt(diffMs/MinuteMs, 10)
-    diffMs -= hours * hourMs
+    minutes = parseInt(diffMs/minuteMs, 10)
+    diffMs -= hours * minuteMs
     
     seconds = parseInt(diffMs/secondsMs, 10)
     
