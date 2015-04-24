@@ -5,7 +5,7 @@
 #   hubot noyaki
 
 module.exports = (robot) ->
-  robot.hear /(野やき|ノヤキ|野焼き|のやき|NOYAKI)$/i, (msg) ->
+  robot.hear /(野やき|ノヤキ|野焼き|のやき|NOYAKI)/i, (msg) ->
     today = new Date()
     noyakiday = new Date today.getFullYear() + "-05-03 12:00:00 +0900"
     if (noyakiday.getTime() - today.getTime()) < 0
