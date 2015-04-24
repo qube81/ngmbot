@@ -30,4 +30,4 @@ module.exports = (robot) ->
     seconds = parseInt(diffMs/secondsMs, 10)
     
 
-    msg.send "NOYAKIまであと#{days}日と#{hours}時間と#{minutes}分と#{minutes}秒くらいだよ！"
+    msg.send "NOYAKIまであと#{days}日と#{hours}時間と#{minutes}分と#{seconds}秒くらいだよ！"
