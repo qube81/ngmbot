@@ -5,11 +5,15 @@
 #   hubot 昼過ぎ
 
 module.exports = (robot) ->
-  robot.hear /(昼|ひる)(過ぎ|すぎ)/i, (msg) ->
+  robot.hear /(昼|ひる).*(過ぎ|すぎ)/i, (msg) ->
 
-    hours = [12..15][parseInt(Math.random()*4)]
-    minutes = parseInt(Math.random()*60)
+    msg.send "「あなたの野焼きはいつから？」"
 
-    hirusugiTime = hours + ':' + minutes
+    if !Math.floor(Math.random()*5)
+      msg.send "「各自解釈でおｋ」"
+      return
 
-    msg.send "「あなたの野焼きはいつから？」「私は"+hirusugiTime+"から」"
+    hours = [12..15][Math.floor(Math.random()*4)].toString();
+    minutes = Math.floor(Math.random()*60).toString();
+
+    msg.send "「私は#{hours}時#{minutes}分から」"
