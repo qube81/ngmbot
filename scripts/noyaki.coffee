@@ -25,7 +25,7 @@ module.exports = (robot) ->
     diffMs -= hours * hourMs
     
     minutes = parseInt(diffMs/minuteMs, 10)
-    diffMs -= hours * minuteMs
+    diffMs -= minutes * minuteMs
     
     seconds = parseInt(diffMs/secondsMs, 10)
     
